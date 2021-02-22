@@ -139,9 +139,10 @@ jobs:
           -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           -H "Accept: application/vnd.github.v3+json" \
           "https://api.github.com/repos/modernappsninja/admin-private/contents/userdata/members/${{ github.event.sender.login }}_${{ github.event.sender.id }}.yml" \
-          -o /tmp/member_record_sha.json
-          cat /tmp/member_record_sha.json
-          member_record_sha=$(cat /tmp/member_record_sha.json | jq -r '.sha')
+          -o /tmp/member_record_sha.json.tmp
+          cat /tmp/member_record_sha.json.tmp
+          member_record_sha=$(cat /tmp/member_record_sha.json.tmp | jq -r '.sha')
+          cat /tmp/member_record_sha.json.tmp | jq -r '.sha' > /tmp/member_record_sha
           echo "member record sha is: $member_record_sha"
           echo $(echo member_record_sha=$(echo $member_record_sha)) >> GITHUB_ENV
       - name: check variables
