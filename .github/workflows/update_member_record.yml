@@ -22,9 +22,12 @@ jobs:
           sudo chmod +x /usr/bin/yq
       - name: curl member record file
         run: |
+          echo "github event repository name: ${{ github.event.repository.name }}"
           curl -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
-          "https://raw.githubusercontent.com/modernapsninjas/${{ github.event.repository.name }}/main/staticuserdata/member_record.yml" \
+          "https://raw.githubusercontent.com/modernapsninjas/${{ github.event.repository.name }}/main/static/userdata/member_record.yml" \
           -o /tmp/member_record.yml
+          cat /tmp/member_record.yml
+      - name: exract member login from existing member record
           yq e '.memberGithubLogin' /tmp/member_record.yml > /tmp/member_record_login
           echo member_record_login=$(cat /tmp/member_record_login) >> $GITHUB_ENV
       - name: verify that github account that opened pull request is the same as member record file being updated
