@@ -28,6 +28,7 @@ jobs:
           -o /tmp/member_record.yml
           cat /tmp/member_record.yml
       - name: exract member login from existing member record
+        run: |
           yq e '.memberGithubLogin' /tmp/member_record.yml > /tmp/member_record_login
           echo member_record_login=$(cat /tmp/member_record_login) >> $GITHUB_ENV
       - name: verify that github account that opened pull request is the same as member record file being updated
