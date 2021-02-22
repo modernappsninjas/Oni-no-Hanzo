@@ -104,7 +104,7 @@ jobs:
           cat /tmp/merge_pr_response.json
           cat /tmp/merge_pr_response.json | jq -r '.sha'
           merge_sha=$(cat /tmp/merge_pr_response.json | jq -r '.sha')
-          echo merge_sha=$(cat /tmp/merge_pr_response.json | jq -r '.sha') >> GITHUB_ENV
+          echo $(echo merge_sha=$(cat /tmp/merge_pr_response.json | jq -r '.sha')) >> GITHUB_ENV
       - name: close pr
         run: |
           curl -X PATCH \
@@ -142,14 +142,14 @@ jobs:
           cat /tmp/member_record_sha.json
           member_record_sha=$(cat /tmp/member_record_sha.json | jq -r '.sha')
           echo "member record sha is: $member_record_sha"
-          echo member_record_sha=$(echo $member_record_sha) >> GITHUB_ENV
+          echo $(echo member_record_sha="$member_record_sha") >> GITHUB_ENV
       - name: check variables
         run: |
           echo "member record sha is: ${{ env.member_record_sha }}"
           echo "merge sha is: ${{ env.merge_sha }}"
-          echo $GITHUB_ENV | grep member_record_sha
-          echo $GITHUB_ENV | grep merge_sha
-          echo $GITHUB_ENV
+          cat $GITHUB_ENV | grep member_record_sha
+          cat $GITHUB_ENV | grep merge_sha
+          cat $GITHUB_ENV
       - name: push updated member record to admin-private/registrations
         run: |
           curl -X PUT \
