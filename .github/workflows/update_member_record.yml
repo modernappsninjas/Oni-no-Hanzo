@@ -129,7 +129,7 @@ jobs:
           curl -X PUT \
           -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           -H "Accept: application/vnd.github.v3+json" \
-          -d '{"message": "Updating Member Record File For '${{ github.event.sender.login }}'", "content": "'$(cat /tmp/merged_member_record.yml | base64 -w 0)'","sha":"'$(cat /tmp/merge_sha'"}' \
+          -d '{"message": "Updating Member Record File For '${{ github.event.sender.login }}'", "content": "'$(cat /tmp/merged_member_record.yml | base64 -w 0)'","sha":"'$(cat /tmp/merge_sha)'"}' \
           "https://api.github.com/repos/modernappsninjas/${{ github.event.sender.login }}/contents/userdata/member_record.yml" \
           -o /tmp/member_repo_post_response.json
           cat /tmp/member_repo_post_response.json
