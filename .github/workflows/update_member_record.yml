@@ -103,8 +103,9 @@ jobs:
           -o /tmp/merge_pr_response.json
           cat /tmp/merge_pr_response.json
           cat /tmp/merge_pr_response.json | jq -r '.sha'
+          cat /tmp/merge_pr_response.json | jq -r '.sha' > /tmp/merge_sha
           merge_sha=$(cat /tmp/merge_pr_response.json | jq -r '.sha')
-          echo $(echo merge_sha=$(cat /tmp/merge_pr_response.json | jq -r '.sha')) >> GITHUB_ENV
+          echo $(echo merge_sha=$(echo $(cat /tmp/merge_pr_response.json | jq -r '.sha'))) >> GITHUB_ENV
       - name: close pr
         run: |
           curl -X PATCH \
@@ -128,7 +129,7 @@ jobs:
           curl -X PUT \
           -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           -H "Accept: application/vnd.github.v3+json" \
-          -d '{"message": "Updating Member Record File For ${{ github.event.sender.login }}", "content": "$(cat /tmp/merged_member_record.yml | base64 -w 0)","sha":"${{ env.merge_sha }}"}' \
+          -d '{"message": "Updating Member Record File For ${{ github.event.sender.login }}", "content": "$(cat /tmp/merged_member_record.yml | base64 -w 0)","sha":"$(cat /tmp/merge_sha"}' \
           "https://api.github.com/repos/modernappsninjas/${{ github.event.sender.login }}/contents/userdata/member_record.yml" \
           -o /tmp/member_repo_post_response.json
           cat /tmp/member_repo_post_response.json
@@ -142,7 +143,7 @@ jobs:
           cat /tmp/member_record_sha.json
           member_record_sha=$(cat /tmp/member_record_sha.json | jq -r '.sha')
           echo "member record sha is: $member_record_sha"
-          echo $(echo member_record_sha="$member_record_sha") >> GITHUB_ENV
+          echo $(echo member_record_sha=$(echo $member_record_sha)) >> GITHUB_ENV
       - name: check variables
         run: |
           echo "member record sha is: ${{ env.member_record_sha }}"
@@ -154,7 +155,7 @@ jobs:
           curl -X PUT \
           -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           -H "Accept: application/vnd.github.v3+json" \
-          -d '{"message": "Updating Member Record File For '${{ github.event.sender.login }}'", "content": "'$(cat /tmp/merged_member_record.yml | base64 -w 0)'", "sha":"'${{ env.member_record_sha }}'"}' \
+          -d '{"message": "Updating Member Record File For '${{ github.event.sender.login }}'", "content": "'$(cat /tmp/merged_member_record.yml | base64 -w 0)'", "sha":"$(cat /tmp/member_record_sha"}' \
           "https://api.github.com/repos/modernappsninja/admin-private/contents/userdata/members/${{ github.event.sender.login }}_${{ github.event.sender.id }}.yml" \
           -o /tmp/admin-private_member_record_post_response.json
           cat /tmp/admin-private_member_record_post_response.json
