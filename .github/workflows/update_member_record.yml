@@ -145,8 +145,11 @@ jobs:
           echo member_record_sha=$(echo $member_record_sha) >> GITHUB_ENV
       - name: check variables
         run: |
-          echo "member record sha is: ${{ env.member_record_sha }}""
+          echo "member record sha is: ${{ env.member_record_sha }}"
           echo "merge sha is: ${{ env.merge_sha }}"
+          echo $GITHUB_ENV | grep member_record_sha
+          echo $GITHUB_ENV | grep merge_sha
+          echo $GITHUB_ENV
       - name: push updated member record to admin-private/registrations
         run: |
           curl -X PUT \
