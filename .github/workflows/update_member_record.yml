@@ -147,9 +147,8 @@ jobs:
         run: |
           echo "member record sha is: ${{ env.member_record_sha }}"
           echo "merge sha is: ${{ env.merge_sha }}"
-          cat $GITHUB_ENV | grep member_record_sha
-          cat $GITHUB_ENV | grep merge_sha
-          cat $GITHUB_ENV
+          echo "member record sha is: $member_record_sha"
+          echo "merge sha is: $merge_sha"
       - name: push updated member record to admin-private/registrations
         run: |
           curl -X PUT \
