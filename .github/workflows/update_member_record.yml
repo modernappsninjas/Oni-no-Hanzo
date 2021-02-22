@@ -69,7 +69,7 @@ jobs:
     name: update_member_record_job
     needs: job_verify_identity
     runs-on: ubuntu-latest
-    if: needs.job_verify_identity.outputs.idverified == 'true'
+    if: needs.job_verify_identity.outputs.output1 == 'true'
     steps:
       - name: review event details
         run: |
