@@ -24,7 +24,7 @@ jobs:
         run: |
           echo "github event repository name: ${{ github.event.repository.name }}"
           curl -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
-          "https://raw.githubusercontent.com/modernapsninjas/${{ github.event.repository.name }}/main/static/userdata/member_record.yml" \
+          "https://raw.githubusercontent.com/modernappsninjas/${{ github.event.repository.name }}/main/static/userdata/member_record.yml" \
           -o /tmp/member_record.yml
           cat /tmp/member_record.yml
       - name: exract member login from existing member record
