@@ -102,10 +102,6 @@ jobs:
           "https://api.github.com/repos/${{ env.org_repo }}/pulls/${{ github.event.number }}/merge" \
           -o /tmp/merge_pr_response.json
           cat /tmp/merge_pr_response.json
-          cat /tmp/merge_pr_response.json | jq -r '.sha'
-          cat /tmp/merge_pr_response.json | jq -r '.sha' > /tmp/merge_sha
-          merge_sha=$(cat /tmp/merge_pr_response.json | jq -r '.sha')
-          echo $(echo merge_sha=$(echo $(cat /tmp/merge_pr_response.json | jq -r '.sha'))) >> GITHUB_ENV
       - name: close pr
         run: |
           curl -X PATCH \
@@ -124,6 +120,16 @@ jobs:
         run: |
           sed -i '/^memberGithubId/c\memberGithubId: "'${{ github.event.sender.id }}'"' /tmp/merged_member_record.yml
           sed -i '/^memberGithubLogin/c\memberGithubLogin: "'${{ github.event.sender.login }}'"' /tmp/merged_member_record.yml
+      - name: gather member repository member record file sha
+        run: |
+          curl \
+          -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          "https://api.github.com/repos/modernappsninjas/${{ github.event.sender.login }}/contents/userdata/member_record.yml" \
+          -o /tmp/merge_sha.tmp
+          cat /tmp/merge_sha.tmp
+          cat /tmp/merge_sha.tmp | jq -r '.sha' > /tmp/merge_sha
+          echo $(echo member_record_sha=$(cat /tmp/merge_sha)) >> GITHUB_ENV
       - name: push updated member record to member repository
         run: |
           curl -X PUT \
@@ -133,7 +139,7 @@ jobs:
           "https://api.github.com/repos/modernappsninjas/${{ github.event.sender.login }}/contents/userdata/member_record.yml" \
           -o /tmp/member_repo_post_response.json
           cat /tmp/member_repo_post_response.json
-      - name: gather member record file sha
+      - name: gather admin-private member record file sha
         run: |
           curl \
           -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
