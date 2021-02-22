@@ -102,6 +102,9 @@ jobs:
           "https://api.github.com/repos/${{ env.org_repo }}/pulls/${{ github.event.number }}/merge" \
           -o /tmp/merge_pr_response.json
           cat /tmp/merge_pr_response.json
+          merge_sha=$(cat /tmp/merge_pr_response.json | jq -r '.sha')
+          echo $merge_sha
+          echo merge_sha=$(cat /tmp/merge_pr_response.json | jq -r '.sha') >> GITHUB_ENV
       - name: close pr
         run: |
           curl -X PATCH \
@@ -134,7 +137,7 @@ jobs:
           curl -X PUT \
           -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           -H "Accept: application/vnd.github.v3+json" \
-          -d '{"message": "Updating Member Record File For ${{ github.event.issue.user.login }}", "content": "'$(cat /tmp/merged_member_record.yml | base64 -w 0)'"}' \
+          -d '{"message": "Updating Member Record File For ${{ github.event.issue.user.login }}", "content": "'$(cat /tmp/merged_member_record.yml | base64 -w 0)'", "sha":"${{ env.merge_sha }}"}' \
           "https://api.github.com/repos/modernappsninja/admin-private/contents/userdata/members/${{ github.event.sender.login }}_${{ github.event.sender.id }}.yml" \
           -o /tmp/member_record_post_response.json
           cat /tmp/member_record_post_response.json
