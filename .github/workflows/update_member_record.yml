@@ -3,7 +3,7 @@ on:
   pull_request_target:
     types: [opened]
     paths:
-    - 'static/admin/userdata/member_record.yml'
+    - 'static/userdata/member_record.yml'
 
 jobs:
   job_verify_identity:
