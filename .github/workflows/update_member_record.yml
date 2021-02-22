@@ -139,13 +139,13 @@ jobs:
           cat /tmp/member_record_sha.json
           member_record_sha=$(cat /tmp/member_record_sha.json | jq -r '.sha')
           echo "member record sha is: $member_record_sha"
-          echo member_record_sha=$member_record_sha >> GITHUB_ENV
+          echo member_record_sha=$(echo $member_record_sha) >> GITHUB_ENV
       - name: push updated member record to admin-private/registrations
         run: |
           curl -X PUT \
           -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           -H "Accept: application/vnd.github.v3+json" \
-          -d '{"message": "Updating Member Record File For '${{ github.event.issue.user.login }}'", "content": "'$(cat /tmp/merged_member_record.yml | base64 -w 0)'", "sha":"'${{ env.member_record_sha }}'"}' \
+          -d '{"message": "Updating Member Record File For '${{ github.event.sender.login }}'", "content": "'$(cat /tmp/merged_member_record.yml | base64 -w 0)'", "sha":"'${{ env.member_record_sha }}'"}' \
           "https://api.github.com/repos/modernappsninja/admin-private/contents/userdata/members/${{ github.event.sender.login }}_${{ github.event.sender.id }}.yml" \
           -o /tmp/member_record_post_response.json
           cat /tmp/member_record_post_response.json
