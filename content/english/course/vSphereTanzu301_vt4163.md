@@ -35,18 +35,20 @@ This Course provides an introductory technical overview of VMware vSphere with T
   
 ### Course Status
 
-Status: In Progress
+Status: "In Progress"  
 
 ### Course Testing Progress
 
-Tests:
-  Test1: Pending
-  Test2: Pending
-  Test3: Pending
+Tests:  
+  Test1: "Pending"  
+  Test2: "Pending"  
+  Test3: "Pending"  
+  Test4: "Pending"  
+  Test5: "Pending"  
 
 ### Course Certificate Of Completion
 
-Completion_Certificate: Pending
+Completion_Certificate: "Pending"  
 
 
 #### End of Member Record
