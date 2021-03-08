@@ -27,24 +27,21 @@ course_navbar_title: vSphere with Tanzu 301
 course_repo_name: vSphereTanzu301_vt4163
 ---  
 
-### About Course
+## About Course
 
 This Course provides an introductory technical overview of VMware vSphere with Tanzu.
 
-### Member Record  
+## Member Record  
   
-404: Not Found---  
+  
+## Course Status  
+
+Status: "In Progress"  
+
+## Course Testing Progress  
+#### Test records will be added to this section as tests are completed.
+  
 ---  
-## test1 Individual Question Results:  
-Question1: Correct  
-Question2: Incorrect  
-Question3: Incorrect  
-## test1 Summary of Results:  
-test1_Total_Question_Count: 1  
-test1_Correct_Response_Count: 1  
-test1_Incorrect_Response_Count: 2  
-test1_Percent_Correct: 33.00%  
-#### Pass or fail grades are not provided for individual tests. A passing grade for the course will be based on the cumulative average grade for all tests in the course.  
   
 ---  
 ## Course Certificate Of Completion
