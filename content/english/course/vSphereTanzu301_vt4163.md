@@ -3,7 +3,7 @@
 ### Hugo Template Metadata
 title: "vSphere with Tanzu 301"
 date: "2021-02-25T00:41:40Z"
-draft: false
+draft: true
 # meta description
 description: "Technical introduction to vSphere with Tanzu - Level 301"
 # course thumbnail
@@ -43,13 +43,13 @@ Status: "In Progress"
   
 ---  
 ### test1 Summary of Results:  
-test1_Total_Question_Count: 1
-#####
-test1_Correct_Response_Count: 1
-#####
-test1_Incorrect_Response_Count: 2
-#####
-test1_Percent_Correct: 33.00%
+test1_Total_Question_Count: 3
+#####  
+test1_Correct_Response_Count: 3
+#####  
+test1_Incorrect_Response_Count: 0
+#####  
+test1_Percent_Correct: 100.00%
 #### Pass or fail grades are not provided for individual tests. A passing grade for the course will be based on the cumulative average grade for all tests in the course.  
   
 ---  
