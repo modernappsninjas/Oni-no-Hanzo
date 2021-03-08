@@ -3,13 +3,13 @@
 ### Hugo Template Metadata
 title: "vSphere with Tanzu 301"
 date: "2021-02-25T00:41:40Z"
-draft: false
+draft: true
 # meta description
 description: "Technical introduction to vSphere with Tanzu - Level 301"
 # course thumbnail
 image: "https://modernapps.ninja/vSphereTanzu301_vt4163/admin/assets/images/vSphereTanzu301_vt4163.jpg"
 # taxonomy
-tags: ["Tanzu Portfiolio"]
+tags: ["Tanzu Portfolio"]
 # teacher
 teacher: "Ninja Admins"
 # duration
@@ -33,22 +33,22 @@ This Course provides an introductory technical overview of VMware vSphere with T
 
 ### Member Record  
   
-### Course Status
-
-Status: "In Progress"  
-
-### Course Testing Progress
-
-Tests:
-  Test1: "Pending"  
-  Test2: "Pending"  
-  Test3: "Pending"  
-  Test4: "Pending"  
-  Test5: "Pending"
-
-### Course Certificate Of Completion
+404: Not Found---  
+---  
+## test1 Individual Question Results:  
+Question1: Correct  
+Question2: Incorrect  
+Question3: Incorrect  
+## test1 Summary of Results:  
+test1_Total_Question_Count: 1  
+test1_Correct_Response_Count: 1  
+test1_Incorrect_Response_Count: 2  
+test1_Percent_Correct: 33.00%  
+#### Pass or fail grades are not provided for individual tests. A passing grade for the course will be based on the cumulative average grade for all tests in the course.  
+  
+---  
+## Course Certificate Of Completion
 
 Completion_Certificate: "Pending"  
 
-
-#### End of Member Record
+## End of Member Course Record
