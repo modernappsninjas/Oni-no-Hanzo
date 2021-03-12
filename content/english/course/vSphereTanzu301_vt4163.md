@@ -37,7 +37,7 @@ This Course provides an introductory technical overview of VMware vSphere with T
   
 ### Course Status  
 
-Status: "In Progress"  
+Status: Completed
 
 ### Course Testing Progress  
 #### Test records will be added to this section as tests are completed.
@@ -54,11 +54,23 @@ test1_Percent_Correct: 100.00%
 #####  
 test1_Grade_Report_Url: "[Click Here](https://github.com/modernappsninjas/Oni-no-Hanzo/blob/main/static/userdata/courses/vSphereTanzu301_vt4163/grade_report.pr73.test1.md)"
 ##### Pass or fail grades are not provided for individual tests. A passing grade for the course will be based on the cumulative average grade for all tests in the course.  
+#####  
+---  
+#### vSphereTanzu301_vt4163 Cumulitive Summary of Test Results:  
+vSphereTanzu301_vt4163_Total_Question_Count: 3  
+#####  
+vSphereTanzu301_vt4163_Correct_Response_Count: 3  
+#####  
+vSphereTanzu301_vt4163_Incorrect_Response_Count: 0 
+#####  
+vSphereTanzu301_vt4163_Percent_Correct: 100.00%  
+vSphereTanzu301_vt4163_Grade_Report_Url: "[Click Here](https://github.com/modernappsninjas/Oni-no-Hanzo/blob/main/static/userdata/courses/vSphereTanzu301_vt4163/grade_report.pr86.vSphereTanzu301_vt4163.md)"
+#####  
   
 ---  
 ### Course Certificate Of Completion
 
-Completion_Certificate: "Pending"  
+Completion_Certificate: Awarded
 #####
 ---
 ##### End of Member Course Record
