@@ -64,7 +64,10 @@ vSphereTanzu301_vt4163_Correct_Response_Count: 3
 vSphereTanzu301_vt4163_Incorrect_Response_Count: 0 
 #####  
 vSphereTanzu301_vt4163_Percent_Correct: 100.00%  
-vSphereTanzu301_vt4163_Grade_Report_Url: "[Click Here](https://github.com/modernappsninjas/Oni-no-Hanzo/blob/main/static/userdata/courses/vSphereTanzu301_vt4163/grade_report.pr86.vSphereTanzu301_vt4163.md)"
+#####  
+vSphereTanzu301_vt4163_Grade:   
+#####  
+vSphereTanzu301_vt4163_Grade_Report_Url: "[Click Here](https://github.com/modernappsninjas/Oni-no-Hanzo/blob/main/static/userdata/courses/vSphereTanzu301_vt4163/grade_report.pr87.vSphereTanzu301_vt4163.md)"
 #####  
   
 ---  
