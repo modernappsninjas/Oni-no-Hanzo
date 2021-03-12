@@ -67,7 +67,7 @@ vSphereTanzu301_vt4163_Percent_Correct: 100.00%
 #####  
 vSphereTanzu301_vt4163_Grade: Pass  
 #####  
-vSphereTanzu301_vt4163_Grade_Report_Url: "[Click Here](https://github.com/modernappsninjas/Oni-no-Hanzo/blob/main/static/userdata/courses/vSphereTanzu301_vt4163/grade_report.pr91.vSphereTanzu301_vt4163.md)"
+vSphereTanzu301_vt4163_Grade_Report_Url: "[Click Here](https://github.com/modernappsninjas/Oni-no-Hanzo/blob/main/static/userdata/courses/vSphereTanzu301_vt4163/grade_report.pr92.vSphereTanzu301_vt4163.md)"
 #####  
   
 ---  
