@@ -7,7 +7,7 @@ draft: false
 # meta description
 description: "Technical introduction to VMware vSphere with Tanzu"
 # course thumbnail
-image: "https://modernapps.ninja/vspheretanzu101_vt7301/admin/assets/images/vspheretanzu101_vt7301.jpg"
+image: "https://modernapps.ninja/vspheretanzu101_vt7301/images/courses/vspheretanzu101_vt7301.jpg"
 # taxonomy
 tags: ["Tanzu Portfiolio"]
 # teacher
@@ -43,6 +43,18 @@ Status: "In Progress"
 ### Course Testing Progress  
 #### Test records will be added to this section as tests are completed.
   
+---  
+#### test1 Summary of Results:  
+test1_Total_Question_Count: 0
+#####  
+test1_Correct_Response_Count: 0
+#####  
+test1_Incorrect_Response_Count: 3
+#####  
+test1_Percent_Correct: 0%
+#####  
+test1_Grade_Report_Url: "[Click Here](https://github.com/modernappsninjas/Oni-no-Hanzo/blob/main/static/userdata/courses/vspheretanzu101_vt7301/grade_report.pr3.test1.md)"
+##### Pass or fail grades are not provided for individual tests. A passing grade for the course will be based on the cumulative average grade for all tests in the course.  
   
 ---  
 ### Course Certificate Of Completion
