@@ -38,10 +38,11 @@ This Course provides an introductory technical overview of VMware vSphere with T
 ### Course Status  
 
 Status: Completed
+#####
 OpenBadge_EntityId: jNl7EbmkSQOemAE9EPbcVQ
+#####
 OpenBadge_Certificate_Url: [https://api.badgr.io/public/assertions/jNl7EbmkSQOemAE9EPbcVQ](https://api.badgr.io/public/assertions/jNl7EbmkSQOemAE9EPbcVQ)
-
-
+#####
 
 ### Course Testing Progress  
 #### Test records will be added to this section as tests are completed.
