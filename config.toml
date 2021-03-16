@@ -90,7 +90,7 @@ expire_days = 2
 [[params.social]]
 title = "twitter"
 icon = "ti-twitter-alt" # themify icon : https://themify.me/themify-icons
-link = "https://twitter.com/sss"
+link = "https://twitter.com/afewell"
 
 #[[params.social]]
 #title = "instagram"
@@ -105,7 +105,7 @@ link = "https://github.com/Oni-no-Hanzo/"
 [[params.social]]
 title = "linkedin"
 icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
-link = "https://www.linkedin.com/company/ddd/"
+link = "https://www.linkedin.com/in/afewell"
 
 
 ################################### English language #####################################
